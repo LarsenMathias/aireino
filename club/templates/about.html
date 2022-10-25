@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+       <link href="https://fonts.googleapis.com/css2?family=Freehand&family=Noto+Serif+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+       
+    <link rel="stylesheet" type='text/css' href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><h1>RC Club</h1></div>
+<ul class="nav-links"></ul>
+<li><a href="home">Home</a></li>
+<li><a href="about">About</a></li>
+<li><a href="#">Events</a></li>
+<li><a href="vayuyana">Vayuyana</a></li>
+<li><a href="departments">Departments</a></li>
+
+    </nav><div class="about"><h2>About Aireino</h2>
+
+    </div>
+    <header> 
+        <div class="cloud cloud1">
+            <div class="light"></div>
+          <img  src="https://images.vexels.com/media/users/3/145795/isolated/preview/05cd33059a006bf49006097af4ccba98-plane-in-flight-by-vexels.png" /></div>
+        <img class="imagelogo" src="images/ogoclub.jpeg" alt="">
+       <div class="aboutinfo">
+        <h3>AIREINO – A student club of the Department of Aeronautical Engineering, MITE has become a brand in itself, 
+            after successfully winning multiple events across the country at Premier Institutes in the past 5 years.
+             The club was established in the year 2015, with an aim to provide a platform to the budding Aero-enthusiasts from across the campus.
+             The club has engaged a lot of workshops and activities
+             The team has aspired to instill a passion and creativity among the students to take part in
+              various competition and excel in their field. 
+              The batch of 2023 are determined to take initiative to restart the club activities.              
+            </h3>
+       </div>
+    </header>
+</body>
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+</html>
