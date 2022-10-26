@@ -36,8 +36,8 @@ urlpatterns = [
     path('',home,name="wrightflight.png"),
     path('',index,name='hoverpod.png'),
     path('',index,name="wrightflight.png"),
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root':settings.STATIC_ROOT}),
+    # url(r'^media/(?P<path>.*)$', serve,{'document_root':settings.MEDIA_ROOT}), 
+    # url(r'^static/(?P<path>.*)$', serve,{'document_root':settings.STATIC_ROOT}),
  urlpatterns.extend(static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)),
    urlpatterns.extend( static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)),
 
